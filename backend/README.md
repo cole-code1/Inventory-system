@@ -1,4 +1,4 @@
-# Inventory Management — Backend (Flask + SQLAlchemy)
+# Electronic Stock Keeping System — Backend (Flask + SQLAlchemy)
 
 ## Setup
 

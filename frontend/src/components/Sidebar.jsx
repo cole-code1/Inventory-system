@@ -14,7 +14,7 @@ export default function Sidebar({ isOpen, onToggle }) {
 
   return (
     <aside className={`sidebar${isOpen ? " sidebar-open" : " sidebar-closed"}`}>
-      <div className="sidebar-brand">📦 Inventory Manager</div>
+      <div className="sidebar-brand">📦 Electronic Stock Keeping System</div>
       <div className="sidebar-links">
         <NavLink to="/" end onClick={onToggle} className={({ isActive }) => (isActive ? "active" : "")}>
           Dashboard

@@ -1,4 +1,4 @@
-# Inventory / Stock Management System
+# Electronic Stock Keeping System
 
 Full-stack inventory management app:
 

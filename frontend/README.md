@@ -1,4 +1,4 @@
-# Inventory Management — Frontend (Vite + React)
+# Electronic Stock Keeping System — Frontend (Vite + React)
 
 ## Setup
 

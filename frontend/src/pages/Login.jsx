@@ -26,7 +26,7 @@ export default function Login() {
   return (
     <div className="auth-page">
       <form className="auth-card" onSubmit={handleSubmit}>
-        <h2>📦 Inventory Manager</h2>
+        <h2>📦 Electronic Stock Keeping System</h2>
         <p className="auth-subtitle">Sign in to continue</p>
 
         {error && <div className="alert alert-error">{error}</div>}

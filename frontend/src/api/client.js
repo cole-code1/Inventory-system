@@ -1,4 +1,5 @@
-const BASE = "/api";
+
+const BASE = "https://inventory-system-10.onrender.com/api";
 
 class ApiError extends Error {
   constructor(message, status, data) {
@@ -19,10 +20,16 @@ async function request(path, options = {}) {
   });
 
   const contentType = res.headers.get("content-type") || "";
-  const data = contentType.includes("application/json") ? await res.json() : null;
+  const data = contentType.includes("application/json")
+    ? await res.json()
+    : null;
 
   if (!res.ok) {
-    throw new ApiError(data?.error || `Request failed (${res.status})`, res.status, data);
+    throw new ApiError(
+      data?.error || `Request failed (${res.status})`,
+      res.status,
+      data
+    );
   }
 
   return data;
@@ -30,8 +37,16 @@ async function request(path, options = {}) {
 
 export const api = {
   get: (path) => request(path),
-  post: (path, body) => request(path, { method: "POST", body: JSON.stringify(body) }),
-  put: (path, body) => request(path, { method: "PUT", body: JSON.stringify(body) }),
+  post: (path, body) =>
+    request(path, {
+      method: "POST",
+      body: JSON.stringify(body),
+    }),
+  put: (path, body) =>
+    request(path, {
+      method: "PUT",
+      body: JSON.stringify(body),
+    }),
   delete: (path) => request(path, { method: "DELETE" }),
 };
 
